@@ -8,6 +8,7 @@ import Loading from "../components/Loading.jsx";
 import PageWrapper from "../components/common/PageWrapper.jsx";
 import Pagination from "../components/common/Pagination.jsx";
 import { getImageUrl } from "../utils/imageUtils.js";
+import SEO from "../components/SEO.jsx";
 
 const MotionLink = motion(Link);
 
@@ -29,7 +30,6 @@ const Facilities = () => {
 
   useEffect(() => {
     fetchFacilities(category);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [category]);
 
   const fetchFacilities = async (selectedCategory) => {
@@ -61,6 +61,12 @@ const Facilities = () => {
 
   return (
     <PageWrapper title="Facilities">
+      <SEO
+        title="Facilities"
+        description="Laboratories, computing infrastructure and research facilities of the Department of Computer Science & Engineering, LNMIIT Jaipur."
+        keywords="LNMIIT CSE labs, computing facilities, research infrastructure"
+      />
+
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 rounded-3xl border border-[#A6192E]/15 bg-gradient-to-br from-white to-[#A6192E]/5 px-6 py-8 shadow-sm md:px-10">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
